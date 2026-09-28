@@ -1139,3 +1139,76 @@ nav a:hover {
     }
 
 }
+/* =========================================
+   FIX HERO OVERFLOW + WORK BUTTON
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Keep hero inside the viewport */
+
+.hero {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+
+/* Prevent hero content from forcing extra width */
+
+.hero-content {
+    min-width: 0;
+}
+
+
+/* Keep image inside its column */
+
+.hero-image {
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* Fix VIEW MY WORK button */
+
+.hero-button {
+    display: inline-flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-button {
+        width: fit-content;
+    }
+
+}
